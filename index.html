@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blank Photo Blog Page</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #111111;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Header / Navigation */
+    header {
+      width: 100%;
+      padding: 28px 48px;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .nav-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 0.95rem;
+    }
+
+    .socials {
+      display: flex;
+      gap: 14px;
+      font-size: 0.9rem;
+    }
+
+    /* Main Layout */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 70px 24px;
+    }
+
+    .post-header {
+      margin-bottom: 40px;
+    }
+
+    .post-title {
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 1.05;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .post-meta {
+      color: #555555;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+
+    .hero-placeholder,
+    .image-placeholder {
+      width: 100%;
+      background: #eeeeee;
+      border: 1px solid #dddddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777777;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.8rem;
+    }
+
+    .hero-placeholder {
+      aspect-ratio: 16 / 9;
+      margin: 36px 0;
+    }
+
+    .content-section {
+      margin: 48px 0;
+    }
+
+    .content-section h2 {
+      font-size: clamp(1.75rem, 4vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .content-section p {
+      margin-bottom: 18px;
+      font-size: 1.05rem;
+    }
+
+    .caption {
+      text-align: center;
+      color: #666666;
+      font-size: 0.9rem;
+      margin-top: 12px;
+    }
+
+    /* Gallery */
+    .gallery-section {
+      margin-top: 70px;
+    }
+
+    .gallery-section h2 {
+      font-size: 2rem;
+      margin-bottom: 28px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .gallery-grid .image-placeholder {
+      aspect-ratio: 4 / 5;
+    }
+
+    /* Post Navigation */
+    .post-nav {
+      margin-top: 70px;
+      padding-top: 32px;
+      border-top: 1px solid #eeeeee;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      font-size: 0.95rem;
+    }
+
+    .post-nav a {
+      color: #333333;
+    }
+
+    .post-nav span {
+      display: block;
+      color: #777777;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid #eeeeee;
+      padding: 32px 24px;
+      text-align: center;
+      color: #666666;
+      font-size: 0.9rem;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      header {
+        padding: 24px;
+      }
+
+      .nav-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .post-nav {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav-wrapper">
+    <div class="logo">Your Logo</div>
+
+    <nav>
+      <ul>
+        <li><a href="#">Autos</a></li>
+        <li><a href="#">Motorsports</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">People</a></li>
+        <li><a href="#">Life</a></li>
+        <li><a href="#">Video</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="socials">
+      <a href="#">IG</a>
+      <a href="#">FB</a>
+      <a href="#">IN</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <article>
+
+    <section class="post-header">
+      <h1 class="post-title">Post Title Goes Here</h1>
+      <p class="post-meta">Date Goes Here</p>
+      <p class="post-meta">Written By Author Name</p>
+    </section>
+
+    <div class="hero-placeholder">
+      Hero Image
+    </div>
+
+    <section class="content-section">
+      <p>
+        Paragraph text goes here. Replace this with your article introduction.
+      </p>
+
+      <p>
+        Additional paragraph text goes here. Use this area for the main story or description.
+      </p>
+
+      <p>
+        More paragraph text goes here.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2>Section Heading</h2>
+
+      <div class="image-placeholder" style="aspect-ratio: 16 / 9;">
+        Image
+      </div>
+
+      <p class="caption">Image caption goes here</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Section Heading</h2>
+
+      <p>
+        Paragraph text goes here.
+      </p>
+
+      <p>
+        Paragraph text goes here.
+      </p>
+
+      <p>
+        Paragraph text goes here.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <div class="image-placeholder" style="aspect-ratio: 16 / 9;">
+        Image
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Section Heading</h2>
+
+      <p>
+        Paragraph text goes here.
+      </p>
+
+      <p>
+        Paragraph text goes here.
+      </p>
+
+      <p>
+        Paragraph text goes here.
+      </p>
+    </section>
+
+    <section class="gallery-section">
+      <h2>Gallery</h2>
+
+      <div class="gallery-grid">
+        <div class="image-placeholder">Image</div>
+        <div class="image-placeholder">Image</div>
+        <div class="image-placeholder">Image</div>
+        <div class="image-placeholder">Image</div>
+        <div class="image-placeholder">Image</div>
+        <div class="image-placeholder">Image</div>
+        <div class="image-placeholder">Image</div>
+        <div class="image-placeholder">Image</div>
+        <div class="image-placeholder">Image</div>
+        <div class="image-placeholder">Image</div>
+        <div class="image-placeholder">Image</div>
+        <div class="image-placeholder">Image</div>
+      </div>
+    </section>
+
+    <nav class="post-nav">
+      <a href="#">
+        <span>Previous</span>
+        Previous Post Title
+      </a>
+
+      <a href="#" style="text-align: right;">
+        <span>Next</span>
+        Next Post Title
+      </a>
+    </nav>
+
+  </article>
+
+</main>
+
+<footer>
+  © 2026 Your Name or Company. All rights reserved.
+</footer>
+
+</body>
+</html>
