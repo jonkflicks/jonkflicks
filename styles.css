@@ -331,12 +331,15 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
+  align-items: start;
 }
 
 .category-gallery img {
-  height: 360px;
-  background: #1a1a1a;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  background: none;
 }
 
 @media (max-width: 900px) {
@@ -371,31 +374,35 @@ footer {
 
 .hero-tile {
   overflow: hidden;
-  background: #111;
+  background: #000;
 }
 
 .hero-tile img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
-/* Top right */
+/* Use this for the taller portrait images */
+.hero-photo-2 img,
+.hero-photo-4 img {
+  object-fit: contain;
+  background: #000;
+}
+
 .hero-photo-1 {
   grid-area: photo1;
 }
 
-/* Bottom right */
 .hero-photo-2 {
   grid-area: photo2;
 }
 
-/* Top left */
 .hero-photo-3 {
   grid-area: photo3;
 }
 
-/* Bottom left */
 .hero-photo-4 {
   grid-area: photo4;
 }
