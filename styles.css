@@ -357,22 +357,24 @@ footer {
   }
 }
 
-@media (max-width: 600px) {
-  .nav {
-    flex-direction: column;
-    gap: 14px;
-  }
+.category-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
 
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+.category-gallery img {
+  height: 360px;
+  background: #1a1a1a;
+  object-fit: cover;
+}
 
-  .stats {
+@media (max-width: 900px) {
+  .category-gallery {
     grid-template-columns: 1fr;
   }
 
-  .page {
-    padding: 140px 18px 70px;
+  .category-gallery img {
+    height: 340px;
   }
 }
