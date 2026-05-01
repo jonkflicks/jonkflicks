@@ -361,12 +361,13 @@ footer {
 }
 
 .hero-grid {
-  height: 100vh;
+  height: calc(100vh - 90px);
+  margin-top: 90px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 12px;
-  padding: 90px 12px 12px;
+  padding: 12px;
   grid-template-areas:
     "photo3 photo1"
     "photo4 photo2";
@@ -381,14 +382,8 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
-}
-
-/* Use this for the taller portrait images */
-.hero-photo-2 img,
-.hero-photo-4 img {
-  object-fit: contain;
-  background: #000;
 }
 
 .hero-photo-1 {
