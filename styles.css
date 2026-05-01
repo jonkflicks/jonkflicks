@@ -420,3 +420,18 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.single-card {
+  grid-template-columns: minmax(0, 650px);
+  justify-content: center;
+}
+
+.contact-card a {
+  color: #f5f5f5;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.contact-card a:hover {
+  opacity: 0.75;
+}
